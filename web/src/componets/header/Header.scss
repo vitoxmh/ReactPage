@@ -1,0 +1,15 @@
+.header{
+    width: 100%;
+    background-color: #000;
+
+    &__logo{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+
+    &__container{
+        display: flex;
+    }
+
+}
