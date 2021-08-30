@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import LayoutPage from './componets/Layouts/LayoutPage';
 import './index.css';
-
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

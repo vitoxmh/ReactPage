@@ -10,11 +10,22 @@ function Formulario() {
 
     const handleInputChange = (e) => {
 
-        console.log(e.target.value);
+    
         setDatos({
             ...datos,
             [e.target.name] : e.target.value
         });
+
+        if(e.target.name == 'nombre' && e.target.value == ''){
+
+            e.target.parentNode.classList.add('error');
+
+        }else{
+
+            e.target.parentNode.classList.remove('error');
+        }
+
+
 
     }
 
