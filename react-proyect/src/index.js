@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Banner from './components/Banner/Banner';
+import './app.scss'
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <h1>Mi app en React</h1>
+    <Banner title="Mi pagina en React" subtitle="Bajada de react"></Banner>
   </React.StrictMode>,
   document.getElementById('app')
 );
