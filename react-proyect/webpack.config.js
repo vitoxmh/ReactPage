@@ -7,19 +7,15 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path:path.join(__dirname, 'dist'),
-        filename: 'bundle.js'
+        filename: 'bundle.js',
+        assetModuleFilename: "images/[hash][ext][query]",
     },
     devServer: {
         port: 4000
     },
-
+ 
     resolve :{
-        extensions : ['.js','.jsx'],
-        alias: {
-
-            'images' : path.resolve(__dirname,'src/img')
-        }
-        
+        extensions : ['.js','.jsx']        
     },
     
     module : {
@@ -45,9 +41,32 @@ module.exports = {
                 include: path.join(__dirname,'src'),
                 options: {
                     name: "[name].[hash].[ext]",
-                    outputPath: "img/",
+                    outputPath: 'img/',
+                    publicPath:'img/',
                     userRelativePath: true
                   }
+              },
+              {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                /**
+                 * The `type` setting replaces the need for "url-loader"
+                 * and "file-loader" in Webpack 5.
+                 *
+                 * setting `type` to "asset" will automatically pick between
+                 * outputing images to a file, or inlining them in the bundle as base64
+                 * with a default max inline size of 8kb
+                 */
+                type: "asset",
+        
+                /**
+                 * If you want to inline larger images, you can set
+                 * a custom `maxSize` for inline like so:
+                 */
+                // parser: {
+                //   dataUrlCondition: {
+                //     maxSize: 30 * 1024,
+                //   },
+                // },
               },
               
               
