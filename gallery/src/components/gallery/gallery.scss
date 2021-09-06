@@ -1,0 +1,11 @@
+.gallery{
+    
+    columns: 5 320px;
+    column-gap: 0.5em;
+
+    &__image{
+        max-width: 100%;
+        margin-bottom: 0.5em;
+        outline: 2px solid #fff; 
+    }
+}
