@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LayoutPage from './componets/Layouts/LayoutPage';
 import './index.css';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
+import gallery from './components/gallery/Gallery';
+import Gallery from './components/gallery/Gallery';
 
 ReactDOM.render(
   <React.StrictMode>
-    <LayoutPage></LayoutPage>
+    <Gallery></Gallery>
   </React.StrictMode>,
   document.getElementById('root')
 );
