@@ -1,0 +1,19 @@
+.nav{
+  width: 80%;
+  margin: 0 auto;
+  height: 30px;
+  background-color: #ccc;
+  display: flex;
+
+}
+
+.nav a{
+  width: 100px;
+
+}
+
+
+.nav a.sel{
+  background-color: brown;
+  color: #fff;
+}
