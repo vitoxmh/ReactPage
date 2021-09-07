@@ -1,0 +1,35 @@
+.input{
+    width: 300px;
+    margin-bottom: 15px;
+    &__label{
+        font: 12px;
+        font-weight: bold;
+    }
+
+    &__input{
+        padding: 7px 9px;
+        border-radius: 5px;
+        border: solid 1px #ccc;
+    }
+
+
+    &__error-message{
+        display: block;
+    }
+
+    &.error{
+
+        .input{
+
+            &__input{
+                border: solid 1px red;
+            }
+
+            &__error-message{
+                display: block;
+                color: red;
+            }
+        }
+
+    }
+}

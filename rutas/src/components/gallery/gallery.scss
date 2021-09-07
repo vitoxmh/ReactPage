@@ -1,0 +1,17 @@
+.gallery{
+    
+    columns: 5 320px;
+    column-gap: 0.5em;
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+
+    &__image{
+        max-width: 100%;
+        margin-bottom: 0.5em;
+        outline: 2px solid #fff; 
+    }
+
+
+  
+}
